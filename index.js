@@ -8,6 +8,7 @@ window.onload = function () {
         let response = await fetch("https://api.openbrewerydb.org/breweries");
         if (response.ok) {
             let data = await response.json();
+            myDiv.innerHTML = "";
             for (let i of data) {
                 let na = `<span class="text-muted">Not available</span>`;
                 let address = na;
